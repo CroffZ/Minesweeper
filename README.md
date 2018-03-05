@@ -1,5 +1,4 @@
 # Minesweeper
-Homework - Minesweeper Game
 
 运行方法：
 
