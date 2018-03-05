@@ -1,4 +1,4 @@
-# cn.croff.main.Minesweeper
+# Minesweeper
 Homework - Minesweeper Game
 
 运行方法：
