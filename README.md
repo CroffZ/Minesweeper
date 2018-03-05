@@ -1,5 +1,5 @@
 # cn.croff.main.Minesweeper
-Homework - cn.croff.main.Minesweeper Game
+Homework - Minesweeper Game
 
 运行方法：
 
