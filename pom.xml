@@ -5,7 +5,7 @@
     <artifactId>Minesweeper</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>cn.croff.main.Minesweeper Maven Webapp</name>
+    <name>Minesweeper Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -13,7 +13,7 @@
     </properties>
 
     <build>
-        <finalName>cn.croff.main.Minesweeper</finalName>
+        <finalName>Minesweeper</finalName>
 
         <plugins>
             <plugin>
