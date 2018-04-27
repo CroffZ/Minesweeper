@@ -1,11 +1,9 @@
 package cn.croff.model;
 
 /**
- * The class <b>cn.croff.model.DotInfo</b> is a simple helper class to store
+ * The class <b>DotInfo</b> is a simple helper class to store
  * the state (e.g. clicked, mined, number of neighbooring mines...)
  * at the dot position (x,y)
- *
- * @author Guy-Vincent Jourdan, University of Ottawa
  */
 public class DotInfo {
 

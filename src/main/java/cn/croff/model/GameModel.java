@@ -5,19 +5,14 @@ import java.util.Random;
 import java.util.Set;
 
 /**
- * The class <b>cn.croff.model.GameModel</b> holds the cn.croff.model, the state of the systems.
+ * The class GameModel holds the model, the state of the systems.
  * It stores the following information:
- * - the state of all the ``dots'' on the board (mined or not, clicked
- * or not, number of neighbooring mines...)
+ * - the state of all the dots on the board (mined or not, clicked or not, number of neighbooring mines...)
  * - the size of the board
  * - the number of steps since the last reset
- * <p>
- * The cn.croff.model provides all of this informations to the other classes trough
- * appropriate Getters.
- * The cn.croff.controller can also update the cn.croff.model through Setters.
- * Finally, the cn.croff.model is also in charge of initializing the game
- *
- * @author Guy-Vincent Jourdan, University of Ottawa
+ * The model provides all of this information to the other classes trough appropriate getters.
+ * The controller can also update the model through setters.
+ * Finally, the model is also in charge of initializing the game.
  */
 public class GameModel {
 
@@ -30,7 +25,7 @@ public class GameModel {
     private int numberOfFlags; // flag的格子数
 
     /**
-     * Constructor to initialize the cn.croff.model to a given size of board.
+     * Constructor to initialize the model to a given size of board.
      *
      * @param width         the width of the board
      * @param heigth        the heigth of the board
@@ -46,7 +41,7 @@ public class GameModel {
     }
 
     /**
-     * Resets the cn.croff.model to (re)start a game. The previous game (if there is one)
+     * Resets the model to (re)start a game. The previous game (if there is one)
      * is cleared up .
      */
     public void reset() {
@@ -312,9 +307,9 @@ public class GameModel {
     }
 
     /**
-     * Builds a String representation of the cn.croff.model
+     * Builds a String representation of the model
      *
-     * @return String representation of the cn.croff.model
+     * @return String representation of the model
      */
     public String toString() {
         // 把棋盘信息存在一个String中返回，主要用于打印棋盘信息到控制台来debug

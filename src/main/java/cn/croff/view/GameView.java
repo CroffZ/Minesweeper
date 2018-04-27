@@ -7,29 +7,26 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * The class <b>cn.croff.view.GameView</b> provides the current cn.croff.view of the entire Game. It extends
- * <b>JFrame</b> and lays out a matrix of <b>cn.croff.view.DotButton</b> (the actual game) and
- * two instances of JButton. The action listener for the buttons is the cn.croff.controller.
- *
- * @author Guy-Vincent Jourdan, University of Ottawa
+ * The class GameView provides the current view of the entire Game.
+ * It extends JFrame and lays out a matrix of DotButton (the actual game) and two instances of JButton.
+ * The action listener for the buttons is the controller.
  */
-
 public class GameView extends JFrame {
 
     private DotButton[][] board; // 放格子对应Button的棋盘
-    private GameModel gameModel; // cn.croff.model.GameModel
-    private JLabel nbreOfStepsLabel; // 步数的Label
+    private GameModel gameModel; // GameModel
+    private JLabel stepsLabel; // 步数的Label
     private JLabel flagsAndMinesLabel; // 埋雷数和旗子数的Label
 
     /**
      * Constructor used for initializing the Frame
      *
-     * @param gameModel      the cn.croff.model of the game (already initialized)
-     * @param gameController the cn.croff.controller
+     * @param gameModel      the model of the game (already initialized)
+     * @param gameController the controller
      */
     public GameView(GameModel gameModel, GameController gameController) {
         // 初始化窗口标题、棋盘信息
-        super("cn.croff.main.Minesweeper");
+        super("Minesweeper");
         this.gameModel = gameModel;
         int width = gameModel.getWidth();
         int heigth = gameModel.getHeigth();
@@ -45,8 +42,8 @@ public class GameView extends JFrame {
 
         // root的下面放步数的Label、Reset按钮和Quit按钮
         JPanel bottom = new JPanel();
-        nbreOfStepsLabel = new JLabel();
-        bottom.add(nbreOfStepsLabel);
+        stepsLabel = new JLabel();
+        bottom.add(stepsLabel);
         JButton reset = new JButton("Reset");
         reset.addActionListener(gameController);
         bottom.add(reset);
@@ -86,12 +83,11 @@ public class GameView extends JFrame {
     }
 
     /**
-     * update the status of the board's cn.croff.view.DotButton instances based
-     * on the current game cn.croff.model, then redraws the cn.croff.view
+     * update the status of the board's DotButton instances based on the current game model, then redraws the view.
      */
     public void update() {
         // 更新步数Label、Flag数Label和棋盘内容
-        nbreOfStepsLabel.setText("Number of steps: " + gameModel.getNumberOfSteps());
+        stepsLabel.setText("Number of steps: " + gameModel.getNumberOfSteps());
         flagsAndMinesLabel.setText("Number of mines: " + gameModel.getNumberOfMines() + " | Number of flags: " + gameModel.getNumberOfFlags());
         for (int i = 0; i < gameModel.getHeigth(); i++) {
             for (int j = 0; j < gameModel.getWidth(); j++) {
@@ -103,8 +99,7 @@ public class GameView extends JFrame {
     }
 
     /**
-     * returns the icon value that must be used for a given dot
-     * in the game
+     * returns the icon value that must be used for a given dot in the game
      *
      * @param i the x coordinate of the dot
      * @param j the y coordinate of the dot

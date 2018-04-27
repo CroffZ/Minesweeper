@@ -4,20 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * In the application <b>cn.croff.main.Minesweeper</b>, a <b>cn.croff.view.DotButton</b> is a specialized type of
- * <b>JButton</b> that represents a square in the game.
- * It can have a number of possible icons, which are found in the
- * "icons" directory. The icon expresses the state of the dot:
- * covered, number of neighbooring mines, exploded..
- * <p>
- * <p>
- * <p>
- * The icons have been found on <a href=
- * "https://en.wikipedia.org/wiki/Open_content">wikimedia</a>. The author of these
- * icons seems to be someone called
- * <a href="https://commons.wikimedia.org/wiki/User:Cryosta">Kazukiokumura</a>.
- *
- * @author Guy-Vincent Jourdan, University of Ottawa
+ * In the application Minesweeper, a DotButton is a specialized type of JButton that represents a square in the game.
+ * It can have a number of possible icons, which are found in the "icons" directory.
+ * The icon expresses the state of the dot: covered, number of neighbooring mines, exploded..
+ * The icons have been found on <a href="https://en.wikipedia.org/wiki/Open_content">wikimedia</a>.
+ * The author of these icons seems to be someone called <a href="https://commons.wikimedia.org/wiki/User:Cryosta">Kazukiokumura</a>.
  */
 public class DotButton extends JButton {
 
@@ -42,7 +33,7 @@ public class DotButton extends JButton {
     /**
      * An array is used to cache all the images. Since the images are not
      * modified, all the cells that display the same image reuse the same
-     * <b>ImageIcon</b> object. Notice the use of the keyword <b>static</b>.
+     * ImageIcon object. Notice the use of the keyword static.
      */
     private static final ImageIcon[] icons = new ImageIcon[NUMBER_OF_ICONS];
 
@@ -51,7 +42,7 @@ public class DotButton extends JButton {
     private int column; // 横坐标
 
     /**
-     * Constructor used for initializing a cn.croff.view.DotButton at a specific
+     * Constructor used for initializing a DotButton at a specific
      * Board location, with a specific icon.
      *
      * @param column     the column of this Cell
@@ -101,7 +92,7 @@ public class DotButton extends JButton {
     }
 
     /**
-     * Returns the <b>ImageIcon</b> reference to use based on
+     * Returns the ImageIcon reference to use based on
      * the current value of the variable iconNumber.
      *
      * @return the image to be displayed by the button

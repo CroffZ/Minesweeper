@@ -4,8 +4,6 @@ import cn.croff.controller.GameController;
 
 /**
  * The class <b>Mineseeper</b> launches the game
- *
- * @author Guy-Vincent Jourdan, University of Ottawa
  */
 public class Minesweeper {
 
@@ -14,14 +12,11 @@ public class Minesweeper {
     private static final int DEFAULT_MINES = 36; // 默认埋雷数
 
     /**
-     * <b>cn.croff.main</b> of the application. Creates the instance of  cn.croff.controller.GameController
-     * and starts the game. If three parameters width, heigth,
-     * number of mines are passed, they are used.
-     * Otherwise, a default value is used. Defaults values are also
-     * used if the paramters are too small (minimum 10 for width,
-     * 5 for heigth and 1 for number of mines).
-     * Additionally, the maximum number of mines is capped at
-     * width*heigth -1
+     * <b>main</b> of the application. Creates the instance of GameController and starts the game.
+     * If three parameters width, heigth, number of mines are passed, they are used.
+     * Otherwise, a default value is used.
+     * Defaults values are also used if the paramters are too small (minimum 10 for width, 5 for heigth and 1 for number of mines).
+     * Additionally, the maximum number of mines is capped at width*heigth -1
      *
      * @param args command line parameters
      */
@@ -63,6 +58,6 @@ public class Minesweeper {
             numberOfMines = (width * heigth - 1);
         }
         // 启动游戏
-        GameController game = new GameController(width, heigth, numberOfMines);
+        new GameController(width, heigth, numberOfMines);
     }
 }

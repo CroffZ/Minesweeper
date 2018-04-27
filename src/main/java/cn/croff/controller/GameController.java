@@ -13,11 +13,8 @@ import java.awt.event.MouseListener;
 import java.util.Stack;
 
 /**
- * The class <b>cn.croff.controller.GameController</b> is the cn.croff.controller of the game. It is a listener
- * of the cn.croff.view, and has a method <b>play</b> which computes the next
- * step of the game, and  updates cn.croff.model and cn.croff.view.
- *
- * @author Guy-Vincent Jourdan, University of Ottawa
+ * The class <b>GameController</b> is the controller of the game.
+ * It is a listener of the view, and has a method <b>play</b> which computes the next step of the game, and updates model and view.
  */
 public class GameController implements ActionListener, MouseListener {
 
@@ -25,8 +22,7 @@ public class GameController implements ActionListener, MouseListener {
     private GameModel gameModel;
 
     /**
-     * Constructor used for initializing the cn.croff.controller. It creates the game's cn.croff.view
-     * and the game's cn.croff.model instances
+     * Constructor used for initializing the controller. It creates the game's view and the game's model instances
      *
      * @param width         the width of the board on which the game will be played
      * @param heigth        the heigth of the board on which the game will be played
