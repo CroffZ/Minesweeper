@@ -1,22 +1,21 @@
 package cn.croff.model;
 
 /**
- * The class <b>DotInfo</b> is a simple helper class to store
- * the state (e.g. clicked, mined, number of neighbooring mines...)
- * at the dot position (x,y)
+ * The class <b>DotInfo</b> is a simple helper class to store the state
+ * (e.g. clicked, mined, number of neighbouring mines...) at the dot position (x,y).
  */
 public class DotInfo {
 
-    private int x; // 横坐标
-    private int y; // 纵坐标
-    private boolean mined; // 是否埋雷
-    private boolean covered; // 内容是否被遮住
-    private boolean wasClicked; // 是否被点击过
-    private int neighbooringMines; // 周围的雷数
-    private boolean flag; // 是否被标记旗子
+    private int x;
+    private int y;
+    private boolean mined;
+    private boolean covered;
+    private boolean wasClicked;
+    private int neighbouringMines;
+    private boolean flag;
 
     /**
-     * Constructor, used to initialize the instance variables
+     * Constructor used to initialize the instance variables.
      *
      * @param x the x coordinate
      * @param y the y coordinate
@@ -49,84 +48,84 @@ public class DotInfo {
     }
 
     /**
-     * Setter for mined
+     * Setter method for the attribute mined changing to true;
      */
     public void setMined() {
         mined = true;
     }
 
     /**
-     * Getter for mined
+     * Getter method for the attribute mined.
      *
-     * @return mined
+     * @return the value of the attribute mined
      */
     public boolean isMined() {
         return mined;
     }
 
     /**
-     * Setter for covered
+     * Setter method for the attribute covered changing to false.
      */
     public void uncover() {
         covered = false;
     }
 
     /**
-     * Getter for covered
+     * Getter method for the attribute covered.
      *
-     * @return covered
+     * @return the value of the attribute covered
      */
     public boolean isCovered() {
         return covered;
     }
 
     /**
-     * Setter for wasClicked
+     * Setter method for the attribute wasClicked changing to true.
      */
     public void click() {
         wasClicked = true;
     }
 
     /**
-     * Getter for wasClicked
+     * Getter method for the attribute wasClicked.
      *
-     * @return wasClicked
+     * @return the value of the attribute wasClicked
      */
     public boolean hasBeenClicked() {
         return wasClicked;
     }
 
     /**
-     * Setter for neighbooringMines
+     * Getter method for the attribute neighbouringMines.
      *
-     * @param neighbooringMines number of neighbooring mines
+     * @return neighbouringMines
      */
-    public void setNeighbooringMines(int neighbooringMines) {
-        this.neighbooringMines = neighbooringMines;
+    public int getNeighbouringMines() {
+        return neighbouringMines;
     }
 
     /**
-     * Get for neighbooringMines
+     * Setter method for the attribute neighbouringMines.
      *
-     * @return neighbooringMines
+     * @param neighbouringMines new value of the attribute neighbouringMines
      */
-    public int getNeighbooringMines() {
-        return neighbooringMines;
+    public void setNeighbouringMines(int neighbouringMines) {
+        this.neighbouringMines = neighbouringMines;
     }
 
     /**
-     * Getter for flag
+     * Getter method for the attribute flag.
      *
-     * @return flag
+     * @return the value of the attribute
      */
     public boolean isFlag() {
         return flag;
     }
 
     /**
-     * Setter for flag
+     * Setter method for the attribute flag.
      *
-     * @param flag flag
+     * @param flag new value of the attribute flag
      */
     public void setFlag(boolean flag) {
         this.flag = flag;

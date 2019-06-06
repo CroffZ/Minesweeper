@@ -6,14 +6,14 @@ import java.awt.*;
 /**
  * In the application Minesweeper, a DotButton is a specialized type of JButton that represents a square in the game.
  * It can have a number of possible icons, which are found in the "icons" directory.
- * The icon expresses the state of the dot: covered, number of neighbooring mines, exploded..
+ * The icon expresses the state of the dot: covered, number of neighbouring mines, exploded..
  * The icons have been found on <a href="https://en.wikipedia.org/wiki/Open_content">wikimedia</a>.
  * The author of these icons seems to be someone called <a href="https://commons.wikimedia.org/wiki/User:Cryosta">Kazukiokumura</a>.
  */
 public class DotButton extends JButton {
 
     /**
-     * predefined values to capture icons of a cn.croff.model.DotInfo
+     * Predefined values to capture icons of a DotInfo.
      */
     public static final int NUMBER_OF_ICONS = 13;
     public static final int ZERO_NEIGHBOURS = 0;
@@ -31,26 +31,24 @@ public class DotButton extends JButton {
     public static final int FLAGGED = 12;
 
     /**
-     * An array is used to cache all the images. Since the images are not
-     * modified, all the cells that display the same image reuse the same
-     * ImageIcon object. Notice the use of the keyword static.
+     * An array is used to cache all the images.
+     * Since the images are not modified, all the cells that display the same image reuse the same ImageIcon object.
+     * Notice the use of the keyword static.
      */
     private static final ImageIcon[] icons = new ImageIcon[NUMBER_OF_ICONS];
 
-    private int iconNumber; // 用哪个图标
-    private int row; // 纵坐标
-    private int column; // 横坐标
+    private int iconNumber;
+    private int row;
+    private int column;
 
     /**
-     * Constructor used for initializing a DotButton at a specific
-     * Board location, with a specific icon.
+     * Constructor used for initializing a DotButton at a specific Board location, with a specific icon.
      *
      * @param column     the column of this Cell
      * @param row        the row of this Cell
      * @param iconNumber specifies which iconNumber to use for this cell
      */
     public DotButton(int column, int row, int iconNumber) {
-        // 初始化坐标、图标、按钮样式
         super();
         this.column = column;
         this.row = row;
@@ -60,15 +58,12 @@ public class DotButton extends JButton {
     }
 
     /**
-     * Sets the current value of the instance variable iconNumber, and update
-     * the iconNumber used by the instance, using the method getImageIcon()
-     * to get the new icon.
+     * Sets the current value of the instance variable iconNumber, and update the iconNumber used by the instance,
+     * using the method getImageIcon() to get the new icon.
      *
-     * @param iconNumber the iconNumber to use, based on the predifined constant values
-     *                   defined in this class
+     * @param iconNumber the iconNumber to use, based on the predefined constant values defined in this class
      */
     public void setIconNumber(int iconNumber) {
-        // 设置图标
         this.iconNumber = iconNumber;
         setIcon(getImageIcon());
     }
@@ -92,8 +87,7 @@ public class DotButton extends JButton {
     }
 
     /**
-     * Returns the ImageIcon reference to use based on
-     * the current value of the variable iconNumber.
+     * Returns the ImageIcon reference to use based on the current value of the variable iconNumber.
      *
      * @return the image to be displayed by the button
      */
