@@ -1,13 +1,16 @@
 # Minesweeper
+A minesweeper game based on Java using MVC design.
 
-运行方法：
+## How to run
+```bash
+cd Minesweeper
+mvn install
+cd target
+java -jar Minesweeper.jar arg1 arg2 arg3
+# arg1 = the width of the game board, default is 20
+# arg2 = the height of the game board, default is 12
+# arg3 = the number of the mines, default is 36
+```
 
-> cd Minesweeper
-
-> mvn install
-
-> cd target
-
-> java -jar Minesweeper.jar (棋盘宽度) (棋盘高度) (雷数)
-
-其中棋盘宽度、棋盘高度、雷数为整数数字，如果不指定则默认分别为20、12、36。
+## Example
+![GameRunningExample](GameRunningExample.png)
