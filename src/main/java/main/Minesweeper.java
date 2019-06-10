@@ -1,6 +1,6 @@
-package cn.croff.main;
+package main;
 
-import cn.croff.controller.GameController;
+import controller.GameController;
 
 /**
  * The class <b>Minesweeper</b> launches the game.

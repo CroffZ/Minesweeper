@@ -1,9 +1,9 @@
-package cn.croff.controller;
+package controller;
 
-import cn.croff.model.DotInfo;
-import cn.croff.model.GameModel;
-import cn.croff.view.DotButton;
-import cn.croff.view.GameView;
+import model.DotInfo;
+import model.GameModel;
+import view.DotButton;
+import view.GameView;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

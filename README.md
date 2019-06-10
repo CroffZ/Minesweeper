@@ -13,8 +13,8 @@ java -jar Minesweeper.jar arg1 arg2 arg3
 ```
 
 ## Examples
-![GameRunningExample](GameRunningExample.png)
+![GameRunningExample](ExampleImages/GameRunningExample.png)
 ---
-![GameWinExample](GameWinExample.png)
+![GameWinExample](ExampleImages/GameWinExample.png)
 ---
-![GameLostExample](GameLostExample.png)
+![GameLostExample](ExampleImages/GameLostExample.png)

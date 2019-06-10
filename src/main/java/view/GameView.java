@@ -1,7 +1,7 @@
-package cn.croff.view;
+package view;
 
-import cn.croff.controller.GameController;
-import cn.croff.model.GameModel;
+import controller.GameController;
+import model.GameModel;
 
 import javax.swing.*;
 import java.awt.*;

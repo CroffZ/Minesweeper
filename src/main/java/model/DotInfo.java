@@ -1,4 +1,4 @@
-package cn.croff.model;
+package model;
 
 /**
  * The class <b>DotInfo</b> is a simple helper class to store the state
