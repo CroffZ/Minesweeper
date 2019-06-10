@@ -1,5 +1,5 @@
 # Minesweeper
-A minesweeper game based on Java using MVC design.
+A minesweeper game based on Java Swing using MVC design.
 
 ## How to run
 ```bash
