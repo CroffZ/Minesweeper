@@ -1,9 +1,9 @@
-package cn.croff.minesweeper.controller;
+package com.example.minesweeper.controller;
 
-import cn.croff.minesweeper.model.GameModel;
-import cn.croff.minesweeper.model.GameModel.RevealResult;
-import cn.croff.minesweeper.view.DotButton;
-import cn.croff.minesweeper.view.GameView;
+import com.example.minesweeper.model.GameModel;
+import com.example.minesweeper.model.GameModel.RevealResult;
+import com.example.minesweeper.view.DotButton;
+import com.example.minesweeper.view.GameView;
 
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;

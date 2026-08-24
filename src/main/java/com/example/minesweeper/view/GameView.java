@@ -1,6 +1,6 @@
-package cn.croff.minesweeper.view;
+package com.example.minesweeper.view;
 
-import cn.croff.minesweeper.model.GameModel;
+import com.example.minesweeper.model.GameModel;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

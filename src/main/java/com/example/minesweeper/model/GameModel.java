@@ -1,4 +1,4 @@
-package cn.croff.minesweeper.model;
+package com.example.minesweeper.model;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

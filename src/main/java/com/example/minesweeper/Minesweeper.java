@@ -1,6 +1,6 @@
-package cn.croff.minesweeper;
+package com.example.minesweeper;
 
-import cn.croff.minesweeper.controller.GameController;
+import com.example.minesweeper.controller.GameController;
 
 import javax.swing.SwingUtilities;
 
