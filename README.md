@@ -71,6 +71,12 @@ All three arguments must be supplied together. Invalid or missing values use the
 
 The model does not expose its mutable cells. Its package-private random-source constructor also allows deterministic examples or checks without changing production behavior.
 
+## Screenshots
+
+| In progress | Won | Lost |
+| --- | --- | --- |
+| ![A Minesweeper game in progress](docs/images/game-running.png) | ![A completed winning board](docs/images/game-won.png) | ![A completed losing board](docs/images/game-lost.png) |
+
 ## License
 
 The application source is available under the [MIT License](LICENSE). The generated Maven Wrapper
