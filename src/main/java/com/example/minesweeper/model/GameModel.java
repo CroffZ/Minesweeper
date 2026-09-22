@@ -196,7 +196,8 @@ public final class GameModel {
                     for (int neighbourX = Math.max(0, x - 1);
                          neighbourX <= Math.min(width - 1, x + 1);
                          neighbourX++) {
-                        if (cells[neighbourY][neighbourX].mined) {
+                        if ((neighbourX != x || neighbourY != y)
+                                && cells[neighbourY][neighbourX].mined) {
                             adjacentMines++;
                         }
                     }
