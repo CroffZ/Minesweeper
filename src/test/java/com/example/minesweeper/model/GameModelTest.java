@@ -63,6 +63,16 @@ public class GameModelTest {
     }
 
     @Test
+    public void adjacentMineCountDoesNotIncludeTheCellItself() {
+        GameModel model = new GameModel(3, 3, 1, new LowestIndexRandom());
+
+        model.reveal(0, 0);
+        model.reveal(1, 0);
+
+        assertEquals(0, model.getAdjacentMines(1, 0));
+    }
+
+    @Test
     public void resetClearsBoardStateAndStartsWithNoMinesPlaced() {
         GameModel model = new GameModel(3, 3, 1, new HighestIndexRandom());
 

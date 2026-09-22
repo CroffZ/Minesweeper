@@ -94,9 +94,11 @@ public final class DotButton extends JButton {
 
     private static final class TileIcon implements Icon {
 
-        private static final Color TILE = new Color(192, 192, 192);
-        private static final Color LIGHT_EDGE = Color.WHITE;
-        private static final Color DARK_EDGE = new Color(112, 112, 112);
+        private static final Color COVERED_TILE = new Color(71, 85, 105);
+        private static final Color REVEALED_TILE = new Color(226, 232, 240);
+        private static final Color GRID_LINE = new Color(148, 163, 184);
+        private static final Color COVERED_HIGHLIGHT = new Color(100, 116, 139);
+        private static final Color COVERED_SHADOW = new Color(51, 65, 85);
         private static final Color[] NUMBER_COLORS = {
                 Color.BLACK,
                 new Color(25, 76, 170),
@@ -136,35 +138,37 @@ public final class DotButton extends JButton {
         }
 
         private void paintTile(Graphics2D canvas, int x, int y) {
-            canvas.setColor(state == CellState.EXPLODED_MINE ? new Color(220, 70, 70) : TILE);
+            boolean covered = state == CellState.COVERED || state == CellState.FLAGGED;
+            canvas.setColor(state == CellState.EXPLODED_MINE
+                    ? new Color(248, 113, 113)
+                    : covered ? COVERED_TILE : REVEALED_TILE);
             canvas.fillRect(x, y, TILE_SIZE, TILE_SIZE);
 
-            if (state == CellState.COVERED || state == CellState.FLAGGED) {
-                canvas.setStroke(new BasicStroke(3f));
-                canvas.setColor(LIGHT_EDGE);
-                canvas.drawLine(x + 1, y + TILE_SIZE - 2, x + 1, y + 1);
-                canvas.drawLine(x + 1, y + 1, x + TILE_SIZE - 2, y + 1);
-                canvas.setColor(DARK_EDGE);
-                canvas.drawLine(x + TILE_SIZE - 2, y + 1, x + TILE_SIZE - 2, y + TILE_SIZE - 2);
-                canvas.drawLine(x + TILE_SIZE - 2, y + TILE_SIZE - 2, x + 1, y + TILE_SIZE - 2);
+            if (covered) {
+                canvas.setColor(COVERED_HIGHLIGHT);
+                canvas.drawLine(x, y, x + TILE_SIZE - 1, y);
+                canvas.drawLine(x, y, x, y + TILE_SIZE - 1);
+                canvas.setColor(COVERED_SHADOW);
+                canvas.drawLine(x + TILE_SIZE - 1, y, x + TILE_SIZE - 1, y + TILE_SIZE - 1);
+                canvas.drawLine(x, y + TILE_SIZE - 1, x + TILE_SIZE - 1, y + TILE_SIZE - 1);
             } else {
-                canvas.setColor(DARK_EDGE);
+                canvas.setColor(GRID_LINE);
                 canvas.drawRect(x, y, TILE_SIZE - 1, TILE_SIZE - 1);
             }
         }
 
         private void paintFlag(Graphics2D canvas, int x, int y) {
-            canvas.setColor(new Color(45, 45, 45));
+            canvas.setColor(new Color(226, 232, 240));
             canvas.fillRect(x + 13, y + 7, 2, 14);
             canvas.fillRect(x + 9, y + 20, 10, 2);
-            canvas.setColor(new Color(210, 40, 40));
+            canvas.setColor(new Color(248, 113, 113));
             int[] xPoints = {x + 14, x + 14, x + 6};
             int[] yPoints = {y + 7, y + 15, y + 11};
             canvas.fillPolygon(xPoints, yPoints, 3);
         }
 
         private void paintMine(Graphics2D canvas, int x, int y) {
-            canvas.setColor(new Color(35, 35, 35));
+            canvas.setColor(new Color(15, 23, 42));
             canvas.setStroke(new BasicStroke(2f));
             canvas.drawLine(x + 7, y + 7, x + 21, y + 21);
             canvas.drawLine(x + 21, y + 7, x + 7, y + 21);
